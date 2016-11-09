@@ -8,7 +8,7 @@ import (
 
 func main()  {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		lissajous.Lissajous(w)
+		lissajous.Lissajous(w, r)
 	})
 	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }
